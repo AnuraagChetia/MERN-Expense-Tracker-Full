@@ -1,0 +1,21 @@
+.resetForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  height: 30rem;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20%;
+  border: 1px solid gainsboro;
+  padding: 30px;
+  text-align: center;
+}
+.resetBtn{
+    color: white;
+    background-color: rgb(86, 136, 228);
+}
+.resetBtn:hover{
+    scale: 100%;
+    background-color: rgb(68, 127, 238);
+}

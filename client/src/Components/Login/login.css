@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+a {
+  cursor: pointer;
+}
+
+i {
+  padding: 5px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+/* header style */
+.page .header {
+  text-align: center;
+}
+
+.page .header .logo,
+.page .header p,
+.page .header button {
+  margin-bottom: 15px;
+}
+
+.logo {
+  padding: 0;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0 !important ;
+  padding-top: 30px;
+  font-size: xxx-large;
+}
+
+.fab {
+  width: inherit;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0095f6;
+  color: #ffffff;
+}
+
+.page .header div {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  color: #8e8e8e;
+}
+
+.orContainer {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 100%;
+}
+
+hr {
+  margin: 0 0 8px 0;
+  /* padding: 2px; */
+}
+
+.or {
+  padding: 0 0 4px 0;
+}
+
+.page .header div hr {
+  width: 200px;
+}
+
+/* container style*/
+.page .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.page .container form,
+input {
+  width: inherit;
+}
+
+.page .container form input {
+  border: 1px solid #dbdbdb;
+  background-color: #fafafa;
+  padding: 10px 5px;
+  margin: 5px 0;
+}
+
+.page .container form input:last-of-type {
+  margin-bottom: 10px;
+}
+
+.page .container form button {
+  width: inherit;
+  margin-bottom: 20px;
+  padding: 7px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0095f6;
+  color: #ffffff;
+}
+
+.page .container ul {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.page .container ul li {
+  display: inline;
+  color: #8e9096;
+}
+
+.page .container ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #8e9096;
+}
+
+/* option style */
+.option p > a {
+  text-decoration: none;
+  color: #00a0f7;
+}
+
+/* otherapps style */
+.otherapps {
+  text-align: center;
+}
+
+.otherapps p {
+  margin-bottom: 15px;
+}
+
+.otherapps > button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.forgetPassword {
+  margin-top: 20px;
+  font-size: small;
+  color: rgb(150, 143, 143);
+}
+
+button:hover {
+  background: #2731b9;
+  transition-duration: 5ms;
+}
+
+.forgetPassword:hover {
+  scale: 100%;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-family: Freight Sans;
+  }
+
+  .page {
+    width: 250px;
+    background-color: #fafafa;
+  }
+
+  .page .header {
+    width: inherit;
+    margin-top: 10px;
+  }
+
+  .page .container {
+    width: inherit;
+  }
+
+  .option {
+    margin: 80px 0;
+  }
+
+  .page .container input {
+    padding: 10px 5px;
+    margin: 5px 0;
+  }
+
+  .page .footer {
+    width: inherith;
+  }
+}
+
+@media only screen and (min-width: 401px) {
+  body {
+    font-family: Neue Helvetica;
+  }
+  .page {
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    background-color: white;
+    margin: 40px 40px 10px 40px;
+  }
+
+  .page .header {
+    width: 270px;
+    margin-top: 15px;
+  }
+
+  .page .container {
+    width: 270px;
+  }
+
+  .option {
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    width: 350px;
+    height: 70px;
+    margin-top: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .otherapps {
+    margin: 20px 0;
+  }
+
+  .otherapps button {
+    margin-right: 5px;
+  }
+
+  .otherapps button:after-of-type {
+    margin-right: none;
+  }
+
+  .page .footer {
+    width: 100%;
+  }
+}

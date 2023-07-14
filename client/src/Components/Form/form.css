@@ -1,0 +1,83 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: #fff;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 30px;
+  border: 1px solid rgb(238, 222, 222);
+}
+
+.header {
+  font-size: xx-large;
+  /* text-align: center; */
+  width: 100%;
+  padding: 0 0 20px;
+}
+select {
+  border: 1px solid gainsboro;
+  padding: 10px 7px;
+  margin: 10px 20px 0 0;
+  border-radius: 9px;
+  /* background-color: red; */
+}
+
+input {
+  border: 1px solid gainsboro;
+  padding: 10px 7px;
+  margin: 10px 20px 0 0;
+  border-radius: 9px;
+}
+
+input:focus {
+  outline: 1px solid gainsboro;
+}
+
+input:hover {
+  /* outline: 1px; */
+  outline: 1px solid gainsboro;
+}
+
+.formBtn {
+  display: flex;
+  margin: 20px 0 0 0;
+}
+button {
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  padding: 8px 14px;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+button:hover {
+  scale: 103%;
+  transition-duration: 2ms;
+}
+
+.cancel {
+  color: rgb(39, 145, 39);
+}
+.cancel:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.save {
+  background-color: rgb(114, 197, 114);
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.save:hover {
+  background-color: rgb(114, 197, 114);
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
