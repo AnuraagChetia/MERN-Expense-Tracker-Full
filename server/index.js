@@ -5,6 +5,7 @@ const fs = require("fs");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const path = require("path");
+require("dotenv").config();
 
 const sequelize = require("./util/database");
 
@@ -13,7 +14,6 @@ const user = require("./model/user");
 const order = require("./model/order");
 const download = require("./model/download");
 const forgetPasswordRequests = require("./model/forgetPasswordRequests");
-require("dotenv").config();
 
 const app = express();
 
@@ -52,7 +52,6 @@ const _dirname = path.dirname("");
 const buildPath = path.join(_dirname, "../client/dist");
 
 app.use(express.static(buildPath));
-console.log(buildPath);
 app.use("/users", userRouter);
 app.use("/expense", expenseRouter);
 app.use("/order", orderRouter);
@@ -60,7 +59,7 @@ app.use("/leaderboard", leaderBoardRouter);
 app.use("/password", passwordRouter);
 app.get("/*", function (req, res) {
   res.sendFile(
-    path.join(__dirname, "../client/dist/index.html"),
+    path.join(__dirname, `../client/dist/index.html`),
     function (err) {
       if (err) {
         res.status(500).send(err);

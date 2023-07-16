@@ -44,7 +44,8 @@ exports.deleteExpense = async (req, res) => {
         Number(req.user.totalExpense) - Number(exp.amount);
       User.update(
         { totalExpense: updatedTotalExpense },
-        { where: { id: req.user.id }, transaction: t }
+        { where: { id: req.user.id } },
+        { transaction: t }
       );
       await t.commit();
       res.status(200).json(result);
