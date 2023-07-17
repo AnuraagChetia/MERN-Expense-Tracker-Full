@@ -19,7 +19,10 @@ const Signup = (props) => {
       password: enteredPassword,
     };
     try {
-      const res = await axios.post("http://localhost:3000/users/signup", user);
+      const res = await axios.post(
+        `http://localhost:3000/users/signup`,
+        user
+      );
       props.modeChanger();
       alert("Account created");
     } catch (error) {

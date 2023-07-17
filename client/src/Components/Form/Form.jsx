@@ -21,7 +21,7 @@ const Form = () => {
     };
     try {
       const res = await axios.post(
-        "http://localhost:3000/expense/add-expense",
+        `http://localhost:3000/expense/add-expense`,
         expense,
         { headers: { Authorization: token } }
       );

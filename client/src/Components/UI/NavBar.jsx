@@ -14,17 +14,24 @@ const NavBar = () => {
   //premium button handler
   const premiumHandler = async () => {
     const token = JSON.parse(localStorage.getItem("token"));
-    const res = await axios.get("http://localhost:3000/order/buy-premium", {
-      headers: { Authorization: token },
-    });
+    const res = await axios.get(
+      `http://localhost:3000/order/buy-premium`,
+      {
+        headers: { Authorization: token },
+      }
+    );
     // const razorpay = new Razorpay({ key: res.keyId });
     const options = {
       key: res.data.keyId,
       order_id: res.data.orderId,
       handler: async (response) => {
-        axios.post("http://localhost:3000/order/success-premium", response, {
-          headers: { Authorization: token },
-        });
+        axios.post(
+          `http://localhost:3000/order/success-premium`,
+          response,
+          {
+            headers: { Authorization: token },
+          }
+        );
         alert("You are now a premium user!!");
         window.location.reload();
       },
@@ -32,9 +39,13 @@ const NavBar = () => {
     const rzp = new Razorpay(options);
     rzp.on("payment.failed", function (response) {
       console.log(response);
-      axios.post("http://localhost:3000/order/failed-premium", response, {
-        headers: { Authorization: token },
-      });
+      axios.post(
+        `http://localhost:3000/order/failed-premium`,
+        response,
+        {
+          headers: { Authorization: token },
+        }
+      );
       alert("Failed transaction");
     });
     rzp.open();

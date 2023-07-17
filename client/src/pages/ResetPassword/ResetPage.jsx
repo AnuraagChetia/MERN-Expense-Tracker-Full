@@ -10,7 +10,7 @@ const ResetPage = () => {
     try {
       const updatedPassword = updatedPasswordRef.current.value;
       const res = await axios.post(
-        `http://localhost:3000/password/update-password/${params.id}`,
+        `http://${process.env.REACT_APP_BACKEND_API}/password/update-password/${params.id}`,
         { password: updatedPassword }
       );
       console.log(res);

@@ -11,7 +11,7 @@ const Downloads = () => {
       try {
         const token = JSON.parse(localStorage.getItem("token"));
         const downloads = await axios.get(
-          "http://localhost:3000/users/get-downloads",
+          `http://localhost:3000/users/get-downloads`,
           { headers: { Authorization: token } }
         );
         dispatch(userActons.getDownloads({ downloads: downloads.data }));

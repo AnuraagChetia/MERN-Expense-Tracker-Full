@@ -13,7 +13,7 @@ const Report = () => {
     const get = async () => {
       const token = JSON.parse(localStorage.getItem("token"));
       const res = await axios.get(
-        "http://localhost:3000/expense/get-expense?page=1&limit=10",
+        `http://localhost:3000/expense/get-expense?page=1&limit=10`,
         {
           headers: { Authorization: token },
         }
@@ -27,7 +27,7 @@ const Report = () => {
   const downloadExpenses = async () => {
     try {
       const token = JSON.parse(localStorage.getItem("token"));
-      const res = await axios.get("http://localhost:3000/expense/download", {
+      const res = await axios.get("http://${process.env.REACT_APP_BACKEND_API}/expense/download", {
         headers: { Authorization: token },
       });
       const a = document.createElement("a");

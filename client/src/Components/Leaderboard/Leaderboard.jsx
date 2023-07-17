@@ -9,7 +9,7 @@ const Leaderboard = () => {
       try {
         const token = JSON.parse(localStorage.getItem("token"));
         const res = await axios.get(
-          "http://localhost:3000/leaderboard/get-leaderboard",
+          `http://localhost:3000/leaderboard/get-leaderboard`,
           { headers: { Authorization: token } }
         );
         // console.log(data);

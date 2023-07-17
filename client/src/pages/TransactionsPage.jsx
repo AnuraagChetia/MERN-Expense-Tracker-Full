@@ -12,7 +12,7 @@ const TransactionsPage = () => {
     const get = async () => {
       const token = JSON.parse(localStorage.getItem("token"));
       const res = await axios.get(
-        "http://localhost:3000/expense/get-expense?page=1&limit=5",
+        `http://localhost:3000/expense/get-expense?page=1&limit=5`,
         {
           headers: { Authorization: token },
         }

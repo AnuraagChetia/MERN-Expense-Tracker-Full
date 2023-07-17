@@ -10,7 +10,7 @@ const ForgetPasswordPage = () => {
     e.preventDefault();
     try {
       const enteredEmail = emailRef.current.value;
-      await axios.post("http://localhost:3000/password/forgetpassword", {
+      await axios.post(`http://localhost:3000/password/forgetpassword`, {
         email: enteredEmail,
       });
       alert("Reset password link has been sent to your mail");

@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     const getUser = async () => {
       const token = JSON.parse(localStorage.getItem("token"));
-      const user = await axios.get("http://localhost:3000/users/get-user", {
+      const user = await axios.get(`http://localhost:3000/users/get-user`, {
         headers: { Authorization: token },
       });
       dispatch(

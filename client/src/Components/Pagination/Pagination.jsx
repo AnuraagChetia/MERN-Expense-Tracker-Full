@@ -11,7 +11,7 @@ const Pagination = () => {
     const getPages = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/expense/get-expense?page=2&limit=5",
+          `http://localhost:3000/expense/get-expense?page=2&limit=5`,
           {
             headers: { Authorization: token },
           }
